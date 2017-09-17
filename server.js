@@ -15,6 +15,6 @@ app.route('/api/auth')
   .post(auth.createUser)
 
 
-app.listen(procces.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log('puerto 5000')
 })
