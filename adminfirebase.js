@@ -1,10 +1,10 @@
 const admin = require("firebase-admin");
 
-const serviceAccount = require("./prueba firebase admin-6634a8a05b15.json");
+const serviceAccount = require("./tesis-dev-firebase-adminsdk-v8anq-87a5af4d70.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://prueba-firebase-admin.firebaseio.com"
+  databaseURL: "https://tesis-dev.firebaseio.com"
 });
 
 const admAuth = admin.auth();
