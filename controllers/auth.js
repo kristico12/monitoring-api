@@ -2,8 +2,9 @@ const firebase = require('../adminfirebase');
 
 function createUser(req,res) {
   firebase.admAuth.createUser({
-    email:req.body.email,
-    password: req.body.password,
+    uid:req.body.aut.identificationCard,    
+    email:req.body.aut.email,
+    password: req.body.aut.password,
   })
   .then((data) => {
     res.status(200).json(data.uid);

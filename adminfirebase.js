@@ -8,10 +8,8 @@ admin.initializeApp({
 });
 
 const admAuth = admin.auth();
-const admDb = admin.database();
 
 module.exports = {
-  admAuth,
-  admDb
+  admAuth
 }
 
