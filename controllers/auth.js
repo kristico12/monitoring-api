@@ -43,10 +43,10 @@ function deleteUser(req, res) {
   const id = req.params.id;
   firebase.admAuth.deleteUser(id)
     .then(() => {
-      res.status(200).json({ status: '200' });
+      res.json({ success: true });
     })
     .catch(error => {
-      res.status(400).json({ status: '400' });
+      res.json({ data: error, success: false });
     })
 }
 
