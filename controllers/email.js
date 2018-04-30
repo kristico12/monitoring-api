@@ -17,7 +17,7 @@ function SendEmail(req, res) {
   var mailOptions = {
     from: 'monitoring.app.info@gmail.com',
     to: emails,
-    subject: 'Sending Email using Node.js',
+    subject: 'Reporte de Actividad',
     html: `
       <h3>Reporte de Actividad Inusual</h3>
       <p>El Sr/a ${name}, tuvo una frecuencia inusual el dia de: 
