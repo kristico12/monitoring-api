@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ //traducir
 
 //metodos
 const auth = require('./controllers/auth');
+const email = require('./controllers/email');
 
 app.route('/api/auth')
   .post(auth.createUser)
@@ -19,7 +20,8 @@ app.route('/api/auth/:id')
   .get(auth.getUser)
   .put(auth.updateUser)
   .delete(auth.deleteUser)
-
+app.route('/api/email')
+  .post(email.SendEmail)
   
 app.listen(process.env.PORT || 5000, () => {
   console.log('puerto 5000')
