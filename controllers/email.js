@@ -1,5 +1,6 @@
 'use strict';
 const nodemailer = require('nodemailer');
+const moment = require('moment-timezone');
 
 function SendEmail(req, res) {
   const name = req.body.name;
@@ -21,8 +22,8 @@ function SendEmail(req, res) {
     html: `
       <h3>Reporte de Actividad Inusual</h3>
       <p>El Sr/a ${name}, tuvo una frecuencia inusual el dia de: 
-        ${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} a las
-        ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}
+        ${moment().tz("America/Bogota").format('DD/MM/YYYY')} a las
+        ${moment().tz("America/Bogota").format('hh:mm:ss a')}
         con un pico de: <strong>${signal}</strong>
       </p>
     `
